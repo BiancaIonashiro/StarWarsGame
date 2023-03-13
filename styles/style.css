@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/assets/galaxy.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 704px;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-board {
+  width: 100%;
+  height: 704px;
+  position: relative;
+  overflow: hidden;
+}
+
+.darthVader {
+  position: absolute;
+  width: 80px;
+  bottom: -5px;
+  animation: darth-vader-animation 2s infinite linear;
+}
+
+.yoda {
+  position: absolute;
+  width: 100px;
+  bottom: -10px;
+}
+
+.jump {
+  animation: jump 500ms ease-out;
+}
+/*
+.walk {
+  animation: walk-left keydown=37 ease-out;
+  animation: walk-right ease-out;
+}*/
+
+/*
+@keyframes walk-keydown {
+  direction {
+    0%:{left: px;}
+      25%:{left: px;}
+        26%:{left: px;}
+          50%:{left: px;}
+            51%:{left: px;}
+              75%:{left: px;}
+                 76%:{left: px;}
+                    100%:{left: px;}
+  }
+  direction {
+    right: 1%;
+  }
+}
+
+@keyframes walk-keyup {
+  left {
+    leftdirection: none;
+  }
+  right {
+    rightdirection: none;
+  }
+}*/
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  40% {
+    bottom: 180px;
+  }
+
+  50% {
+    bottom: 180px;
+  }
+  60% {
+    bottom: 180px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes darth-vader-animation {
+  from {
+    right: -35px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+.mercury,
+.coffee1 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 280px;
+  left: 320px;
+  align-content: center;
+  transition: ;
+}
+
+.venus,
+.coffee2 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 320px;
+  left: 210px;
+}
+
+.earth,
+.coffee3 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 400px;
+  left: 140px;
+}
+
+.mars,
+.coffee4 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 200px;
+  left: 400px;
+}
+
+.jupiter,
+.coffee5 {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 140px;
+  left: 230px;
+}
+
+.saturn,
+.coffee6 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 630px;
+  left: 120px;
+}
+
+.uranus,
+.coffee7 {
+  position: absolute;
+  width: 70px;
+  height: 70x;
+  top: 530px;
+  left: 16px;
+}
+
+.neptune,
+.coffee8 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 250px;
+  left: 16px;
+}
+
+.coffee1,
+.coffee2,
+.coffee3,
+.coffee4,
+.coffee5,
+.coffee6,
+.coffee7,
+.coffee8 {
+  display: flex;
+  width: 50px;
+  max-height: 35px;
+}
+
+.victory {
+  width: 50px;
+}
+.game-over {
+  width: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-size: contain;
+    background-position: center;
+    background-color: black;
+    height: 714px;
+  }
+
+  .game-board {
+    display: flex;
+    align-items: center;
+    left: 550px;
+    bottom: 70px;
+  }
+
+  @keyframes darth-vader-animation {
+    from {
+      right: 1100px;
+    }
+
+    to {
+      right: 100%;
+    }
+  }
+}
